@@ -91,7 +91,7 @@
 
                 2. What does JavaScript event loop do?
 
-                
+                The event loop is the secret behind javaScript’s asynchronous behavior. Js is a single threaded language. But using some smart data structure gives us the illusion of multi-threading language. The call stack is responsible for keeping track of all the operations in line to be executed. The event queue is responsible for sending new functions to the stack for processing. Whenever an async function is called it is sent to the browser API. Based on the command received from the call stack browser API starts its own single threaded operation. When an async function is processed in the stack it is sent to the corresponding API(event queue) which waits until specified time to send the operation back for processing. Hence we have a cyclic system when using async functions in js. Browser API acts as separate threads. The event loop facilitates this process. It constantly checks whether or not the call stack is empty. If it is empty new functions are added from the event queue.
             -->
         </section>
         <footer></footer>
